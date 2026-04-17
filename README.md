@@ -1,4 +1,4 @@
-# pg-macros
+# Tokio-Postgres Macros
 
 Proc-macros for working with `tokio-postgres`:
 
