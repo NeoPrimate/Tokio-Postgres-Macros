@@ -1,0 +1,17 @@
+[package]
+name = "from_row"
+version = "0.1.0"
+edition = "2024"
+description = "Runtime support for #[derive(FromRow, ToRow)] over tokio-postgres"
+license = "MIT OR Apache-2.0"
+
+[dependencies]
+from_row_derive = { path = "../from_row_derive", version = "0.1.0" }
+query_as = { path = "../query_as", version = "0.1.0" }
+tokio-postgres = { version = "0.7", features = ["with-uuid-1", "with-jiff-0_2"] }
+uuid = { version = "1", features = ["v7", "serde"] }
+futures-util = "0.3"
+deadpool-postgres = { version = "0.14", optional = true }
+
+[features]
+deadpool = ["dep:deadpool-postgres"]

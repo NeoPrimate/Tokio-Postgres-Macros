@@ -1,0 +1,16 @@
+[package]
+name = "query_as_core"
+version = "0.1.0"
+edition = "2024"
+description = "Shared runtime for query_as / from_row_derive proc-macros"
+license = "MIT OR Apache-2.0"
+
+# NOTE: intentionally NOT `proc-macro = true`. This is a plain library that
+# hosts the shared tokio runtime + DB client used by the proc-macro crates
+# (`query_as`, `from_row_derive`). Proc-macro crates can only export
+# proc-macros, so shared infrastructure lives here.
+
+[dependencies]
+tokio = { version = "1", features = ["full"] }
+tokio-postgres = { version = "0.7", features = ["with-uuid-1", "with-jiff-0_2"] }
+dotenvy = "0.15"

@@ -1,0 +1,8 @@
+[workspace]
+resolver = "2"
+members = [
+    "from_row",
+    "from_row_derive",
+    "query_as",
+    "query_as_core",
+]

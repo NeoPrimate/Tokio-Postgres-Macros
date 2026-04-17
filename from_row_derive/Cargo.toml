@@ -1,0 +1,17 @@
+[package]
+name = "from_row_derive"
+version = "0.1.0"
+edition = "2024"
+description = "Proc-macros: #[derive(FromRow, ToRow)] for tokio-postgres rows"
+license = "MIT OR Apache-2.0"
+
+[lib]
+proc-macro = true
+
+[dependencies]
+syn = { version = "2", features = ["full"] }
+quote = "1"
+proc-macro2 = "1"
+tokio = { version = "1", features = ["full"] }
+tokio-postgres = { version = "0.7", features = ["with-uuid-1", "with-jiff-0_2"] }
+dotenvy = "0.15"
