@@ -21,7 +21,7 @@ Add to `Cargo.toml`:
 
 ```toml
 [dependencies]
-from_row = { git = "https://github.com/YOUR_HANDLE/pg-macros" }
+from_row = { git = "https://github.com/NeoPrimate/pg-macros" }
 ```
 
 Then:
